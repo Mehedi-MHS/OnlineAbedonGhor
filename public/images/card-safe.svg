@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-label="নিরাপদ ও ফ্রি">
+  <defs>
+    <linearGradient id="c4bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#171717"/>
+      <stop offset="1" stop-color="#0a0a0a"/>
+    </linearGradient>
+    <linearGradient id="c4o" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fdba74"/>
+      <stop offset="1" stop-color="#ea580c"/>
+    </linearGradient>
+    <pattern id="c4d" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.1" fill="#fff" opacity=".07"/>
+    </pattern>
+    <filter id="c4s" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#000" flood-opacity=".4"/>
+    </filter>
+  </defs>
+  <rect width="640" height="420" fill="url(#c4bg)"/>
+  <rect width="640" height="420" fill="url(#c4d)"/>
+  <circle cx="150" cy="330" r="140" fill="#f97316" opacity=".14"/>
+  <circle cx="150" cy="330" r="90" fill="none" stroke="#f97316" opacity=".28"/>
+  <g filter="url(#c4s)">
+    <path d="M320 48l150 54v106c0 92-62 150-150 178-88-28-150-86-150-178V102z" fill="url(#c4o)"/>
+    <path d="M320 74l124 45v89c0 76-50 125-124 150-74-25-124-74-124-150v-89z" fill="#0a0a0a"/>
+    <rect x="286" y="176" width="68" height="62" rx="12" fill="#f97316"/>
+    <path d="M302 176v-16a18 18 0 0 1 36 0v16" fill="none" stroke="#f97316" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="320" cy="204" r="8" fill="#0a0a0a"/>
+    <rect x="316" y="208" width="8" height="16" rx="4" fill="#0a0a0a"/>
+  </g>
+  <g filter="url(#c4s)">
+    <rect x="436" y="270" width="128" height="64" rx="16" fill="#fff7ed"/>
+    <circle cx="468" cy="302" r="16" fill="#f97316"/>
+    <path d="M461 302l5 5 9-10" fill="none" stroke="#0a0a0a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="494" y="290" width="52" height="8" rx="4" fill="#0a0a0a"/>
+    <rect x="494" y="306" width="38" height="6" rx="3" fill="#fdba74"/>
+  </g>
+  <g stroke="#f97316" stroke-width="3" stroke-linecap="round" opacity=".8">
+    <path d="M110 110v22M99 121h22"/>
+  </g>
+  <circle cx="550" cy="120" r="6" fill="#f97316" opacity=".8"/>
+  <circle cx="520" cy="200" r="4" fill="#f97316" opacity=".5"/>
+</svg>

@@ -1,0 +1,127 @@
+---
+import { site, navLinks } from '@/data/site';
+import {
+  FacebookIcon,
+  LogoMark,
+  MessengerIcon,
+  WhatsAppIcon,
+} from '@/components/icons';
+
+const year = new Date().getFullYear();
+const tools = navLinks.filter((link) => link.href !== '/contact');
+---
+
+<footer class="relative overflow-hidden bg-ink-950 text-white">
+  <div
+    class="pointer-events-none absolute -top-32 right-0 h-72 w-72 rounded-full bg-brand-500/20 blur-3xl"
+    aria-hidden="true"
+  ></div>
+  <div class="container-page relative py-14 sm:py-16">
+    <div class="grid gap-10 lg:grid-cols-[1.5fr_1fr_1fr_1.2fr]">
+      <div>
+        <a href="/" class="inline-flex items-center gap-3" aria-label={`${site.name} হোমপেজ`}>
+          <LogoMark className="h-12 w-12 rounded-xl" />
+          <span class="text-lg font-bold">{site.name}</span>
+        </a>
+        <p class="mt-4 max-w-sm text-sm leading-relaxed text-white/55">
+          {site.tagline}। ছবি থেকে পিডিএফ, সিভি তৈরি আর আবেদনের সব দরকারি তথ্য — সবকিছু
+          সম্পূর্ণ ফ্রি ও নিরাপদ।
+        </p>
+        <div class="mt-5 flex items-center gap-2.5">
+          <a
+            href={site.facebookGroup}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-white transition hover:bg-brand-500 hover:text-white"
+            aria-label="ফেসবুক গ্রুপ"
+          >
+            <FacebookIcon className="h-4 w-4" />
+          </a>
+          <a
+            href={site.whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-white transition hover:bg-[#25D366] hover:text-ink-950"
+            aria-label="WhatsApp"
+          >
+            <WhatsAppIcon className="h-4 w-4" />
+          </a>
+          <a
+            href={site.messenger}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-white transition hover:bg-[#0084FF]"
+            aria-label="Messenger"
+          >
+            <MessengerIcon className="h-4 w-4" />
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-sm font-bold tracking-wide text-white">টুলস</h2>
+        <ul class="mt-4 space-y-3 text-sm text-white/55">
+          {tools.map((link) => (
+            <li key={link.href}>
+              <a href={link.href} class="transition hover:text-brand-400">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-sm font-bold tracking-wide text-white">সাইট</h2>
+        <ul class="mt-4 space-y-3 text-sm text-white/55">
+          <li>
+            <a href="/" class="transition hover:text-brand-400">
+              হোমপেজ
+            </a>
+          </li>
+          <li>
+            <a href="/contact" class="transition hover:text-brand-400">
+              যোগাযোগ
+            </a>
+          </li>
+          <li>
+            <a href="/contact#faq" class="transition hover:text-brand-400">
+              সাধারণ প্রশ্ন
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-sm font-bold tracking-wide text-white">যোগাযোগ</h2>
+        <ul class="mt-4 space-y-3 text-sm text-white/55">
+          <li>
+            <a href={`mailto:${site.email}`} class="transition hover:text-brand-400">
+              {site.email}
+            </a>
+          </li>
+          <li>
+            <a href={site.whatsapp} target="_blank" rel="noopener noreferrer" class="transition hover:text-brand-400">
+              WhatsApp-এ মেসেজ করুন
+            </a>
+          </li>
+          <li>
+            <a href={site.facebookGroup} target="_blank" rel="noopener noreferrer" class="transition hover:text-brand-400">
+              ফেসবুক গ্রুপে জয়েন করুন
+            </a>
+          </li>
+        </ul>
+        <div class="mt-5 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-xs leading-relaxed text-white/50">
+          সেবা পাওয়া যায় <span class="font-semibold text-brand-400">সপ্তাহে ৭ দিন</span>, সকাল ৯টা – রাত ১০টা।
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between">
+      <p>
+        © {year} {site.name}। সর্বস্বত্ব সংরক্ষিত।
+      </p>
+      <p>ভালোবাসা দিয়ে তৈরি — বাংলাদেশের আবেদনকারীদের জন্য 🇧🇩</p>
+    </div>
+  </div>
+</footer>
